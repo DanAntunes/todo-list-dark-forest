@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filter = filterSelect.value;
     todoList.innerHTML = "";
 
+    // biome-ignore lint/complexity/noForEach: <explanation>
     todos
       .filter((todo) => {
         if (filter === "done") return todo.completed;
