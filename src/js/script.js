@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchQuery = searchInput.value.toLowerCase();
     todoList.innerHTML = "";
 
+    // biome-ignore lint/complexity/noForEach: <explanation>
     todos
       .filter((todo) => {
         const matchesFilter =
