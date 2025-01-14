@@ -8,24 +8,27 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #f1f1f1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+h1.title{
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.95);
+}
+.form-control input,
+.form-control select {
+  background-color: #292929;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
 
-  header h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: #f1f1f1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  }
-
-  .form-control input,
-  .form-control select {
-    background-color: #292929;
-    color: #fff;
-    border: 1px solid #444;
-    border-radius: 5px;
-    padding: 8px 12px;
-  }
-
-  .meu-botao {
+  .button {
     background-color: #333;
     color: #fff;
     border: 1px solid #444;
@@ -67,8 +70,4 @@ body {
 
   #todo-list .todo button:hover {
     color: #1db954;
-  }
-
-  #edit-form {
-    display: none;
   }
