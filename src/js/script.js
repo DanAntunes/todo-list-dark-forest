@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="modal-body">
               <div class="mb-3">
                 <label for="task-desc" class="form-label">Descrição</label>
-                <input type="text" class="form-control" id="task-desc" placeholder="Descrição da tarefa" required>
+                <textarea class="form-control" id="task-desc" placeholder="Descrição da tarefa" rows="3" required></textarea>
               </div>
               <div class="mb-3">
                 <label for="task-border" class="form-label">Cor da Borda</label>
