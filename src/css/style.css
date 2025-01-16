@@ -79,7 +79,7 @@ h5{
   --bs-modal-border-color: var(--border-color);
 }
 .description{
-  background: var(--bg-form-control)!important;
+  background: var(--bg-form-control);
   padding: 15px;
   border-radius: 5px;
   margin-top: 10px;
