@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         todoItem.dataset.id = todo.id;
 
         todoItem.innerHTML = `
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center todo">
             <div>
               <input type="checkbox" class="form-check-input me-2 toggle-complete" ${
                 todo.completed ? "checked" : ""
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <button class="btn btn-sm btn-danger delete-task">Excluir</button>
             </div>
           </div>
-          <p class="description mt-2" style="display: none;">${todo.description}</p>
+          <p class="description mt-4" style="display: none;">${todo.description}</p>
         `;
 
         todoList.appendChild(todoItem);
