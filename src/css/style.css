@@ -58,6 +58,9 @@ h5{
   padding: 8px 12px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
 }
+.todo-item{
+  background: var(--darkness-color);
+}
 .button {
   background-color: var(--bg-btn);
   color: var(--primary-color);
@@ -74,4 +77,13 @@ h5{
   --bs-modal-color: var(--primary-color);
   --bs-modal-bg: var(--darkness-color);
   --bs-modal-border-color: var(--border-color);
+}
+.description{
+  background: var(--bg-form-control)!important;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  word-wrap: break-word;
+  white-space: normal;  
+  overflow-wrap: break-word; 
 }
