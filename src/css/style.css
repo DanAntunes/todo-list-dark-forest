@@ -78,6 +78,11 @@ h5{
   --bs-modal-bg: var(--darkness-color);
   --bs-modal-border-color: var(--border-color);
 }
+#task-desc{
+  word-wrap: break-word;
+  white-space: normal;  
+  overflow-wrap: break-word; 
+}
 .description{
   background: var(--bg-form-control);
   padding: 15px;
