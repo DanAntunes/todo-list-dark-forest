@@ -2,6 +2,6 @@ Features e problemas para resolver no codigo.
 
 1. - Estilizar os modais.
 
-1.4 - Por um modal para quando o usuario quiser excluir um modal.
+2 - Alterar o container da descrição para uma cor mais escuro.
 
-3 - Alterar o container da descrição para uma cor mais escuro.
+3 - Melhorar botão de visualizar a descrição das to-do.
