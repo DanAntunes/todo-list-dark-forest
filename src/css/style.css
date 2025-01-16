@@ -1,9 +1,22 @@
+:root {
+  --primary-color: #fff;
+  --bg-modal-color: #191919;
+  --bg-color: #121212;
+  --bg-container: #1e1e1e;
+  --bg-form-control: #292929;
+  --bg-btn: #333;
+  --darkness-color: #111111 ;
+  --hover-color: #555; 
+  --border-color: #444;
+
+  --text-color: #f1f1f1;
+}
 body {
-    background-color: #121212;
-    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
   }
 .todo-container {
-    background-color: #1e1e1e;
+    background-color: var(--bg-container);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
@@ -11,7 +24,7 @@ body {
 header h1 {
   text-align: center;
   font-size: 2rem;
-  color: #f1f1f1;
+  color: var(--text-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 h1.title{
@@ -26,21 +39,21 @@ h5{
 }
 .form-control input,
 .form-control select {
-  background-color: #292929;
-  color: #fff;
-  border: 1px solid #444;
+  background-color: var(--bg-form-control);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 8px 12px;
 }
 .button {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #444;
+  background-color: var(--bg-btn);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 8px 12px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .button:hover {
-  background-color: #555;
+  background-color: var(--hover-color);
   transform: scale(1.05); /* Aumenta o tamanho para 105% */
 }
