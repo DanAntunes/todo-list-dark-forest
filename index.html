@@ -80,7 +80,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="edit-task-desc" class="form-label">Descrição</label>
-                  <input type="text" class="form-control" id="edit-task-desc" placeholder="Descrição da tarefa">
+                  <textarea class="form-control" id="edit-task-desc" placeholder="Descrição da tarefa" rows="3" required></textarea>
                 </div>
                 <div class="mb-3">
                   <label for="edit-task-color" class="form-label">Cor da borda</label>
@@ -96,7 +96,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary" id="save-edit-btn">Salvar</button>
+              <button type="button" class="btn btn-success" id="save-edit-btn">Salvar</button>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@
               <p id="error-message"></p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
             </div>
           </div>
         </div>
