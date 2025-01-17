@@ -73,10 +73,20 @@ h5{
   background-color: var(--hover-color);
   transform: scale(1.05); /* Aumenta o tamanho para 105% */
 }
+.modal-backdrop.show {
+  backdrop-filter: blur(5px) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
 .modal{
   --bs-modal-color: var(--primary-color);
   --bs-modal-bg: var(--darkness-color);
   --bs-modal-border-color: var(--border-color);
+}
+.modal-header {
+  border-bottom: none!important;
+}
+.modal-footer {
+  border-top: none!important;
 }
 #task-desc{
   word-wrap: break-word;
