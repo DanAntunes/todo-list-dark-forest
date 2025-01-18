@@ -173,10 +173,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     if (e.target.classList.contains("delete-task")) {
-      todos = todos.filter((t) => t.id !== todoId);
-      saveToLocalStorage();
-      renderTodos();
-      alertify.success("Tarefa excluída com sucesso!");
+      alertify.confirm(
+        "Confirmação de Exclusão",
+        "Tem certeza de que deseja excluir esta tarefa?",
+        () => {
+          todos = todos.filter((t) => t.id !== todoId);
+          saveToLocalStorage();
+          renderTodos();
+          alertify.success("Tarefa excluída com sucesso!");
+        },
+        () => {
+          alertify.error("A exclusão foi cancelada.");
+        }
+      );
     }
   });
   
