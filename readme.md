@@ -1,7 +1,5 @@
 Features e problemas para resolver no codigo.
 
-1. - Estilizar os modais.
-
-2 - Alterar o container da descrição para uma cor mais escuro.
-
-3 - Melhorar botão de visualizar a descrição das to-do.
+1 - Estilizar os modais.
+2 - Fazer com que o input search fique limpo ao adicionar uma tarefa.
+3 - Fazer com que o todo fique com a borda verde ao ser marcado como feita.
