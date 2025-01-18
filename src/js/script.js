@@ -41,15 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
               <h5 class="d-inline">${todo.title}</h5>
             </div>
             <div>
-              <button class="btn btn-sm btn-info me-2 toggle-description">+</button>
+              <button class="btn btn-sm btn-info me-2 toggle-description">
+                <i class="bi bi-plus-circle-fill"></i>
+              </button>
               <button class="btn btn-sm btn-primary edit-task">Editar</button>
               <button class="btn btn-sm btn-danger delete-task">Excluir</button>
             </div>
           </div>
           <p class="description mt-4" style="display: none;">${todo.description}</p>
         `;
+        
 
         todoList.appendChild(todoItem);
+        
       });
   };
 
@@ -94,10 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    // Adiciona o modal ao DOM
     document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-    // Inicia o modal com Bootstrap
     const addTaskModal = new bootstrap.Modal(document.getElementById("addTaskModal"));
     addTaskModal.show();
 
@@ -136,29 +138,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    openAddTaskModal(); // Abre o modal ao clicar em adicionar
+    openAddTaskModal(); 
   });
 
   todoList.addEventListener("click", (e) => {
     const todoItem = e.target.closest(".todo-item");
     const todoId = Number(todoItem?.dataset.id);
-
-    if (e.target.classList.contains("toggle-description")) {
-      const description = todoItem.querySelector(".description");
-      description.style.display = description.style.display === "none" ? "block" : "none";
+  
+    if (e.target.closest(".toggle-description")) {
+      const toggleDescriptionButton = todoItem.querySelector(".toggle-description");
+      const descriptionElement = todoItem.querySelector(".description");
+      const icon = toggleDescriptionButton.querySelector("i");
+  
+      if (icon.classList.contains("bi-plus-circle-fill")) {
+        icon.classList.remove("bi-plus-circle-fill");
+        icon.classList.add("bi-dash-circle-fill");
+        descriptionElement.style.display = "block";
+      } else {
+        icon.classList.remove("bi-dash-circle-fill");
+        icon.classList.add("bi-plus-circle-fill");
+        descriptionElement.style.display = "none";
+      }
     }
-
+  
     if (e.target.classList.contains("edit-task")) {
       const todo = todos.find((t) => t.id === todoId);
       currentEditId = todoId;
-
+  
       document.getElementById("edit-task-title").value = todo.title;
       document.getElementById("edit-task-desc").value = todo.description;
       document.getElementById("edit-task-color").value = todo.color;
-
+  
       editModal.show();
     }
-
+  
     if (e.target.classList.contains("delete-task")) {
       todos = todos.filter((t) => t.id !== todoId);
       saveToLocalStorage();
@@ -166,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alertify.success("Tarefa excluída com sucesso!");
     }
   });
-
+  
   document.getElementById("save-edit-btn").addEventListener("click", () => {
     const title = document.getElementById("edit-task-title").value.trim();
     const description = document.getElementById("edit-task-desc").value.trim();
