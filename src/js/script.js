@@ -13,13 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveToLocalStorage = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
   };
-
   const renderTodos = () => {
     const filter = filterSelect.value;
     const searchQuery = searchInput.value.toLowerCase();
     todoList.innerHTML = "";
   
-    // Filtra e renderiza os todos
     const filteredTodos = todos.filter((todo) => {
       const matchesFilter =
         filter === "done" ? todo.completed : filter === "todo" ? !todo.completed : true;
@@ -28,11 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     for (const todo of filteredTodos) {
-      // Cria o elemento do todo
       const todoItem = document.createElement("div");
       todoItem.className = `todo-item border border-${todo.color || "secondary"} rounded p-3 mb-3`;
-
-      // Adiciona a classe 'border-success' se o todo estiver concluído
+      
       if (todo.completed) {
         todoItem.classList.add("border-success");
       }
@@ -61,8 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
       todoList.appendChild(todoItem);
     }
   };
-  
-  // Atualiza o evento change para aplicar a lógica corretamente
   todoList.addEventListener("change", (e) => {
     if (e.target.classList.contains("toggle-complete")) {
       const todoItem = e.target.closest(".todo-item");
@@ -72,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (todo) {
         todo.completed = e.target.checked;
         saveToLocalStorage();
-        renderTodos(); // Re-renderiza a lista para atualizar os estilos
+        renderTodos();
       }
     }
   });
@@ -81,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("error-message").textContent = message;
     errorModal.show();
   };
-
   const openAddTaskModal = () => {
     const modalHTML = `
       <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
@@ -147,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alertify.success("Tarefa criada com sucesso!");
     });
 
-    // Limpa o modal do DOM após o fechamento
     addTaskModal._element.addEventListener('hidden.bs.modal', () => {
       document.getElementById("addTaskModal").remove();
     });
