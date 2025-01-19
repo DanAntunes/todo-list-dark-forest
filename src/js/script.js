@@ -18,52 +18,70 @@ document.addEventListener("DOMContentLoaded", () => {
     const filter = filterSelect.value;
     const searchQuery = searchInput.value.toLowerCase();
     todoList.innerHTML = "";
+  
+    // Filtra e renderiza os todos
+    const filteredTodos = todos.filter((todo) => {
+      const matchesFilter =
+        filter === "done" ? todo.completed : filter === "todo" ? !todo.completed : true;
+      const matchesSearch = todo.title.toLowerCase().includes(searchQuery);
+      return matchesFilter && matchesSearch;
+    });
 
-    // biome-ignore lint/complexity/noForEach: <explanation>
-    todos
-      .filter((todo) => {
-        const matchesFilter =
-          filter === "done" ? todo.completed : filter === "todo" ? !todo.completed : true;
-        const matchesSearch = todo.title.toLowerCase().includes(searchQuery);
-        return matchesFilter && matchesSearch;
-      })
-      .forEach((todo) => {
-        const todoItem = document.createElement("div");
-        todoItem.className = `todo-item border border-${todo.color || "secondary"} rounded p-3 mb-3`;
-        todoItem.dataset.id = todo.id;
+    for (const todo of filteredTodos) {
+      // Cria o elemento do todo
+      const todoItem = document.createElement("div");
+      todoItem.className = `todo-item border border-${todo.color || "secondary"} rounded p-3 mb-3`;
 
-        todoItem.innerHTML = `
-          <div class="d-flex justify-content-between align-items-center todo">
-            <div>
-              <input type="checkbox" class="form-check-input me-2 toggle-complete" ${
-                todo.completed ? "checked" : ""
-              }>
-              <h5 class="d-inline">${todo.title}</h5>
-            </div>
-            <div>
-              <button class="btn btn-sm btn-info me-2 toggle-description">
-                <i class="bi bi-plus-circle-fill"></i>
-              </button>
-              <button class="btn btn-sm btn-primary edit-task">Editar</button>
-              <button class="btn btn-sm btn-danger delete-task">Excluir</button>
-            </div>
+      // Adiciona a classe 'border-success' se o todo estiver concluído
+      if (todo.completed) {
+        todoItem.classList.add("border-success");
+      }
+
+      todoItem.dataset.id = todo.id;
+
+      todoItem.innerHTML = `
+        <div class="d-flex justify-content-between align-items-center todo">
+          <div>
+            <input type="checkbox" class="form-check-input me-2 toggle-complete" ${
+              todo.completed ? "checked" : ""
+            }>
+            <h5 class="d-inline">${todo.title}</h5>
           </div>
-          <p class="description mt-4" style="display: none;">${todo.description}</p>
-        `;
-        
+          <div>
+            <button class="btn btn-sm btn-info me-2 toggle-description">
+              <i class="bi bi-plus-circle-fill"></i>
+            </button>
+            <button class="btn btn-sm btn-primary edit-task">Editar</button>
+            <button class="btn btn-sm btn-danger delete-task">Excluir</button>
+          </div>
+        </div>
+        <p class="description mt-4" style="display: none;">${todo.description}</p>
+      `;
 
-        todoList.appendChild(todoItem);
-        
-      });
+      todoList.appendChild(todoItem);
+    }
   };
-
+  
+  // Atualiza o evento change para aplicar a lógica corretamente
+  todoList.addEventListener("change", (e) => {
+    if (e.target.classList.contains("toggle-complete")) {
+      const todoItem = e.target.closest(".todo-item");
+      const todoId = Number(todoItem?.dataset.id);
+      const todo = todos.find((t) => t.id === todoId);
+  
+      if (todo) {
+        todo.completed = e.target.checked;
+        saveToLocalStorage();
+        renderTodos(); // Re-renderiza a lista para atualizar os estilos
+      }
+    }
+  });
   const showModalError = (message) => {
     const errorModal = new bootstrap.Modal(document.getElementById("errorModal"));
     document.getElementById("error-message").textContent = message;
     errorModal.show();
   };
 
-  // Modal para adicionar descrição e cor ao criar tarefa
   const openAddTaskModal = () => {
     const modalHTML = `
       <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
@@ -103,7 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const addTaskModal = new bootstrap.Modal(document.getElementById("addTaskModal"));
     addTaskModal.show();
 
-    // Salva a tarefa ao clicar no botão de salvar
     document.getElementById("save-task-btn").addEventListener("click", () => {
       const description = document.getElementById("task-desc").value.trim();
       const color = document.getElementById("task-border").value;
