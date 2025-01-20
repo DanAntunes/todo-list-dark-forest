@@ -136,6 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
       todos.push(newTodo);
       saveToLocalStorage();
       renderTodos();
+
+      todoInput.value = "";
+
       addTaskModal.hide();
       alertify.success("Tarefa criada com sucesso!");
     });
