@@ -1,7 +1,10 @@
 Features e problemas para resolver no codigo.
 
 1 - Estilizar os modais.
-2 - Fazer com que o input search fique limpo ao adicionar uma tarefa.
+
+2 - Adicionatar input date na criação no modal.
+
+3 - Por esse date ao lado da todo.
 
 18/01 - Adicionando modal alertify para exclusão de tarefa.
 
