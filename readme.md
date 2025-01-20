@@ -6,3 +6,5 @@ Features e problemas para resolver no codigo.
 18/01 - Adicionando modal alertify para exclusão de tarefa.
 
 19/01 - Adicionando feature de por uma borda de success na todo que estiver marcada como feita.
+
+20/01 - Limpando campo do todo-input ao criar todo.
