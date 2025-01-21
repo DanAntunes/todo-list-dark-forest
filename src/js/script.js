@@ -77,19 +77,17 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   const openAddTaskModal = () => {
     const modalHTML = `
-      <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="addTaskModalLabel">Criar Nova Tarefa</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="task-desc" class="form-label">Descrição</label>
-                <textarea class="form-control" id="task-desc" placeholder="Descrição da tarefa" rows="3" required></textarea>
-              </div>
-              <div class="mb-3">
+ <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addTaskModalLabel">Criar Nova Tarefa</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-3">
+              <!-- Cor da Borda -->
+              <div class="col-md-6">
                 <label for="task-border" class="form-label">Cor da Borda</label>
                 <select class="form-control" id="task-border">
                   <option value="primary">Azul</option>
@@ -99,15 +97,26 @@ document.addEventListener("DOMContentLoaded", () => {
                   <option value="warning">Amarelo</option>
                 </select>
               </div>
+              <!-- Data -->
+              <div class="col-md-6">
+                <label for="task-date" class="form-label">Data</label>
+                <input type="date" class="form-control" id="task-date" required />
+              </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary" id="save-task-btn">Salvar Tarefa</button>
+            <!-- Descrição -->
+            <div class="mb-3">
+              <label for="task-desc" class="form-label">Descrição</label>
+              <textarea class="form-control" id="task-desc" placeholder="Descrição da tarefa" rows="3" required></textarea>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="save-task-btn">Salvar Tarefa</button>
           </div>
         </div>
       </div>
-    `;
+    </div>
+  `;
 
     document.body.insertAdjacentHTML('beforeend', modalHTML);
 
