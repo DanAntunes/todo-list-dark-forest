@@ -1,13 +1,11 @@
-Features e problemas para resolver no codigo.
+# Atualizações do ToDo List
 
-1 - Estilizar os modais.
+### 18/01 - Adicionando modal alertify para exclusão de tarefa.
 
-2 - Adicionatar input date na criação no modal.
+    Aprimorando feature já existente, colocando um modal de alerta.
 
-3 - Por esse date ao lado da todo.
+### 19/01 - Adicionando feature de por uma borda de success na todo que estiver marcada como feita.
 
-18/01 - Adicionando modal alertify para exclusão de tarefa.
+### 20/01 - Limpando campo do todo-input ao criar todo.
 
-19/01 - Adicionando feature de por uma borda de success na todo que estiver marcada como feita.
-
-20/01 - Limpando campo do todo-input ao criar todo.
+### 21/01 - Adicionando input date aos modais.
