@@ -1,29 +1,43 @@
 # Atualizações do ToDo List
 
-### 18/01 - Adicionando modal alertify para exclusão de tarefa.
+Este documento lista as atualizações mais recentes realizadas no projeto **ToDo List BlackShadow**. Cada atualização aprimora a funcionalidade ou adiciona novas features para melhorar a experiência do usuário.
 
-    Aprimorando feature já existente, colocando um modal de alerta.
+---
 
-### 19/01 - Adicionando feature de por uma borda de success na todo que estiver marcada como feita.
+## **Atualizações Recentes**
 
-    Nova feature;
+### **18/01 - Modal de Confirmação com Alertify.js**
+- **Descrição:** Aprimoramento de uma feature existente.
+- **Detalhes:** Implementado um modal de alerta com **Alertify.js** para confirmar a exclusão de tarefas. Isso garante maior segurança ao evitar exclusões acidentais.
 
-    if (todo.completed) {
-        todoItem.classList.add("border-success");
-    }
+---
 
-    Fazendo com que uma borda de success seja adicionada quando uma tarefa for concluida.
+### **19/01 - Borda de Success para Tarefas Concluídas**
+- **Descrição:** Adição de uma nova feature.
+- **Detalhes:** Agora, quando uma tarefa for marcada como concluída, ela receberá automaticamente uma borda verde (success), destacando visualmente as tarefas feitas.
 
-### 20/01 - Limpando campo do todo-input ao criar todo.
+- **Código:**
+  ```javascript
+  if (todo.completed) {
+      todoItem.classList.add("border-success");
+  }
+  ```
 
-    Aprimorando feature já existente;
-    
-    todoInput.value = "";
+---
 
-    Limpando input quando uma criada for criada.
+### **20/01 - Limpeza Automática do Campo de Entrada**
+- **Descrição:** Aprimoramento de uma feature já existente.
+- **Detalhes:** O campo de entrada de tarefas (**todo-input**) agora é limpo automaticamente após a criação de uma nova tarefa, melhorando a usabilidade.
 
-### 21/01 - Adicionando input date aos modais.
+- **Código:**
+  ```javascript
+  todoInput.value = "";
+  ```
 
-     Nova feature;
+---
 
-     Adicionado input date aos modais de crianção de ToDo e na edição do ToDo.
+### **21/01 - Adição do Input de Data aos Modais**
+- **Descrição:** Adição de uma nova feature.
+- **Detalhes:** Foi incluído um **input date** nos modais de criação e edição de tarefas. Isso permite que os usuários definam uma data específica para cada tarefa, facilitando o gerenciamento de prazos.
+
+---
