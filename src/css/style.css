@@ -107,3 +107,25 @@ h5{
 .todo-date{
   color: white;
 }
+
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+footer p {
+  font-size: .875rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+footer p a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: var(--hover-color);
+  text-decoration: none;
+}
