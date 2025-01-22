@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveToLocalStorage = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
   };
+
   const renderTodos = () => {
     const filter = filterSelect.value;
     const searchQuery = searchInput.value.toLowerCase();
@@ -36,27 +37,30 @@ document.addEventListener("DOMContentLoaded", () => {
       todoItem.dataset.id = todo.id;
 
       todoItem.innerHTML = `
-        <div class="d-flex justify-content-between align-items-center todo">
-          <div>
-            <input type="checkbox" class="form-check-input me-2 toggle-complete" ${
-              todo.completed ? "checked" : ""
-            }>
-            <h5 class="d-inline">${todo.title}</h5>
-          </div>
-          <div>
-            <button class="btn btn-sm btn-info me-2 toggle-description">
-              <i class="bi bi-plus-circle-fill"></i>
-            </button>
-            <button class="btn btn-sm btn-primary edit-task">Editar</button>
-            <button class="btn btn-sm btn-danger delete-task">Excluir</button>
-          </div>
+      <div class="d-flex justify-content-between align-items-center todo">
+        <div>
+          <input type="checkbox" class="form-check-input me-2 toggle-complete" ${todo.completed ? "checked" : ""}>
+          <h5 class="d-inline">${todo.title}</h5>
         </div>
-        <p class="description mt-4" style="display: none;">${todo.description}</p>
-      `;
+        <div class="text-center flex-grow-1">
+          <p class=" small mb-0 todo-date">${todo.date || "Sem data definida"}</p>
+        </div>
+        <div>
+          <button class="btn btn-sm btn-info me-2 toggle-description">
+            <i class="bi bi-plus-circle-fill"></i>
+          </button>
+          <button class="btn btn-sm btn-primary edit-task">Editar</button>
+          <button class="btn btn-sm btn-danger delete-task">Excluir</button>
+        </div>
+      </div>
+      <p class="description mt-4" style="display: none;">${todo.description}</p>
+    `;
+    
 
       todoList.appendChild(todoItem);
     }
   };
+
   todoList.addEventListener("change", (e) => {
     if (e.target.classList.contains("toggle-complete")) {
       const todoItem = e.target.closest(".todo-item");
@@ -70,11 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
   const showModalError = (message) => {
     const errorModal = new bootstrap.Modal(document.getElementById("errorModal"));
     document.getElementById("error-message").textContent = message;
     errorModal.show();
   };
+
   const openAddTaskModal = () => {
     const modalHTML = `
  <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
@@ -126,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("save-task-btn").addEventListener("click", () => {
       const description = document.getElementById("task-desc").value.trim();
       const color = document.getElementById("task-border").value;
+      const date = document.getElementById("task-date").value;
 
       const title = todoInput.value.trim();
       if (!title) {
@@ -139,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title,
         description: description || "Sem descrição.",
         color: color || "secondary",
+        date: date || "Sem data definida",
         completed: false,
       };
 
