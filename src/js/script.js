@@ -197,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("edit-task-title").value = todo.title;
       document.getElementById("edit-task-desc").value = todo.description;
       document.getElementById("edit-task-color").value = todo.color;
+      document.getElementById("edit-task-date").value = todo.date || "";
   
       editModal.show();
     }
@@ -222,6 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = document.getElementById("edit-task-title").value.trim();
     const description = document.getElementById("edit-task-desc").value.trim();
     const color = document.getElementById("edit-task-color").value;
+    const date = document.getElementById("edit-task-date").value;
 
     if (!title) {
       showModalError("O título da tarefa não pode estar vazio ao editar.");
@@ -233,6 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
       todo.title = title;
       todo.description = description || "Sem descrição.";
       todo.color = color || "secondary";
+      todo.date = date || "Sem data definida";
       saveToLocalStorage();
       renderTodos();
       editModal.hide();
