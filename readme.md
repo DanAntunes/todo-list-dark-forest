@@ -70,4 +70,6 @@ Este documento lista as atualizações mais recentes realizadas no projeto **ToD
   ```javascript
   const date = document.getElementById("edit-task-date").value;
   document.getElementById("edit-task-date").value = todo.date || "";
+  ```
+  Além disso, a **class** CSS `todo-date` foi aplicada ao campo de data para estilizar o texto, garantindo que ele seja exibido na cor branca.
 
