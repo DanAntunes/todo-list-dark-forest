@@ -1,0 +1,58 @@
+@import url('./variables.css');
+
+/* Componentes Principais */
+.todo-container {
+  background-color: var(--bg-container);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+.todo-item {
+  background: var(--darkness-color);
+}
+.todo-date {
+  color: white;
+}
+/* Botões */
+.button {
+  background-color: var(--bg-btn);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal-backdrop.show {
+  backdrop-filter: blur(5px) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.modal {
+  --bs-modal-color: var(--primary-color);
+  --bs-modal-bg: var(--darkness-color);
+  --bs-modal-border-color: var(--border-color);
+}
+.modal-header {
+  border-bottom: none !important;
+}
+.modal-footer {
+  border-top: none !important;
+}
+
+/* Descrição e Tarefas */
+#task-desc,
+.description {
+  background: var(--bg-form-control);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+}
