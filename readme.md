@@ -104,3 +104,12 @@ Este documento lista as atualizações mais recentes realizadas no projeto **ToD
   - **forms.css:** Contém os estilos relacionados a inputs, selects e formulários.  
   - **style.css:** Permanece como o arquivo principal que importa os demais.
 
+---
+
+### **23/01 - Estilização de Itens de Tarefas**
+
+- **Descrição:**  
+Atualização dos estilos dos itens de tarefas para melhorar a aparência e a interatividade.
+
+- **Detalhes:**  
+ Foi adicionado um novo estilo para os itens de tarefas `.todo-item`. Esse estilo melhora a aparência ao alterar o fundo, a cor do texto e adicionar efeitos de borda e sombra. Além disso, foram incluídos efeitos de transição e hover para uma melhor experiência do usuário.
