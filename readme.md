@@ -91,3 +91,16 @@ Este documento lista as atualizações mais recentes realizadas no projeto **ToD
   ```
   ---
 
+### **23/01 - Organização do Arquivo CSS**
+
+- **Descrição:**  
+  Reorganização do arquivo `style.css` em múltiplos arquivos menores e mais específicos para facilitar a manutenção e o crescimento do projeto.
+
+- **Detalhes:**  
+  O arquivo original foi dividido em 5 arquivos separados:  
+  - **variables.css:** Contém todas as variáveis CSS definidas no `:root`.  
+  - **base.css:** Inclui os estilos globais, como `body`, headers, rodapé e elementos básicos.  
+  - **components.css:** Abrange os estilos dos componentes principais, como `.todo-container`, `.todo-item`, botões e modais.  
+  - **forms.css:** Contém os estilos relacionados a inputs, selects e formulários.  
+  - **style.css:** Permanece como o arquivo principal que importa os demais.
+
