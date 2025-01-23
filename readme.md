@@ -41,3 +41,33 @@ Este documento lista as atualizações mais recentes realizadas no projeto **ToD
 - **Detalhes:** Foi incluído um **input date** nos modais de criação e edição de tarefas. Isso permite que os usuários definam uma data específica para cada tarefa, facilitando o gerenciamento de prazos.
 
 ---
+
+### **22/01 - Adição de Lógica ao Campo de Data (Input Date)**
+
+- **Descrição:**  
+  Aprimoramento de uma funcionalidade existente para melhorar a usabilidade.
+
+- **Detalhes:**  
+  Nos modais de criação e edição de tarefas (*To-Do's*), o campo de entrada de data (**input date**) com o **ID** `task-date` foi atualizado para gerenciar corretamente o valor inserido:
+
+  - **Caso o usuário defina uma data:** O valor será salvo no *To-Do*.  
+  - **Caso o usuário não preencha o campo:** Será exibida a mensagem padrão: `"Sem data definida"`.
+
+  Essa melhoria garante que o campo de data seja exibido de forma amigável e funcional em qualquer cenário.
+
+----
+
+### **22/01 - Edição do Campo de Data (Input Date)**
+
+- **Descrição:**  
+  Atualização da funcionalidade de edição para permitir modificar a data de uma tarefa existente.
+
+- **Detalhes:**  
+  O modal de edição foi ajustado para incluir o campo de entrada de data (**input date**) com o **ID** `edit-task-date`.  
+  - **Ao abrir o modal de edição:** O valor do campo de data será preenchido com a data previamente definida no *To-Do* ou deixado em branco, caso nenhuma data tenha sido configurada.  
+
+  Código utilizado para preencher o valor:  
+  ```javascript
+  const date = document.getElementById("edit-task-date").value;
+  document.getElementById("edit-task-date").value = todo.date || "";
+
