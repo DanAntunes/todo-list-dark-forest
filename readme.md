@@ -73,3 +73,21 @@ Este documento lista as atualizações mais recentes realizadas no projeto **ToD
   ```
   Além disso, a **class** CSS `todo-date` foi aplicada ao campo de data para estilizar o texto, garantindo que ele seja exibido na cor branca.
 
+---
+### **22/01 - Atualização do Rodapé (Footer)**
+
+- **Descrição:**  
+  Modificação no rodapé da aplicação para melhorar a apresentação e fornecer um link para o perfil do desenvolvedor.
+
+- **Detalhes:**  
+  Foi adicionado um rodapé com a seguinte estrutura em HTML:  
+  ```html
+  <footer class="bg-dark">
+    <p>
+      © 2025. Todos Os Direitos Reservados. Feito por Dan Antunes.
+      <a href="https://github.com/DanAntunes" target="_blank">DJA</a>.
+    </p>
+  </footer>
+  ```
+  ---
+
