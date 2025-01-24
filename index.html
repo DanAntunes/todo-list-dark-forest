@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- Define the character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Set the viewport to ensure proper scaling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Provide a description of the webpage -->
+    <meta name="description" content="To Do List - BlackShadow Theme - 
+    Projeto de Lista de Tarefas com Tema BlackShadow - Feito por Dan Antunes - DJA">
+    <!-- Specify keywords relevant to the content of the webpage -->
+    <meta name="keywords" content="To Do List, Lista de Tarefas, BlackShadow, Tema, Bootstrap, JavaScript, HTML, CSS">
+    <!-- Set the title of the webpage -->
     <title>To Do List - BlackShadow Theme</title>
-
     <!--Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap icons -->
@@ -33,36 +40,39 @@
 
     <main class="container mt-3 todo-container mb-4">
       <!-- Adicionar tarefa -->
-      <form id="todo-form">
-        <h5>Adicionar tarefa:</h5>
+      <form id="todo-form" aria-labelledby="add-task-label"></form>
+        <h5 id="add-task-label">Adicionar tarefa:</h5>
         <div class="form-control d-flex">
-          <input type="text" id="todo-input" placeholder="O que você vai fazer?" class="flex-grow-1 me-2">
-          <button type="submit" class="button">
+          <label for="todo-input" class="visually-hidden">O que você vai fazer?</label>
+          <input type="text" id="todo-input" placeholder="O que você vai fazer?" class="flex-grow-1 me-2" aria-required="true">
+          <button type="submit" class="button" aria-label="Adicionar tarefa">
             <i class="fa fa-plus"></i>
           </button>
         </div>
       </form>
       <!-- Input search -->
-      <section id="toolbar" class="mt-3">
-        <h5>Pesquisar:</h5>
+      <section id="toolbar" class="mt-3" aria-labelledby="search-label">
+        <h5 id="search-label">Pesquisar:</h5>
         <div class="d-flex">
-          <input type="text" id="search-input" placeholder="Buscar" class="form-control me-2">
-          <button id="erase-button" class="button">
+          <label for="search-input" class="visually-hidden">Buscar</label>
+          <input type="text" id="search-input" placeholder="Buscar" class="form-control me-2" aria-required="true">
+          <button id="erase-button" class="button" aria-label="Apagar busca">
             <i class="fa fa-delete-left"></i>
           </button>
         </div>
       </section>
       <!-- Filter -->
-      <section id="filter" class="mt-3">
-        <h5>Filtrar:</h5>
-        <select id="filter-select" class="form-control">
+      <section id="filter" class="mt-3" aria-labelledby="filter-label">
+        <h5 id="filter-label">Filtrar:</h5>
+        <label for="filter-select" class="visually-hidden">Filtrar tarefas</label>
+        <select id="filter-select" class="form-control" aria-required="true">
           <option value="all">Todos</option>
           <option value="done">Feitas</option>
           <option value="todo">A fazer</option>
         </select>
       </section>
       <!-- Lista de tarefas -->
-      <section id="todo-list" class="mt-3"></section>
+      <section id="todo-list" class="mt-3" aria-live="polite"></section>
     </main>
 
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -141,6 +151,4 @@
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
-  
-
 </html>
