@@ -30,11 +30,11 @@
   background: var(--darkness-color);
   border: 0 solid #000;
   content: "";
-  height: 155px;
+  height: 80px;
   left: -75px;
   opacity: 0.8;
   position: absolute;
-  top: -50px;
+  top: -15px;
   transform: rotate(35deg);
   width: 50px;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
