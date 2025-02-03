@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for (const todo of filteredTodos) {
       const todoItem = document.createElement("div");
-      todoItem.className = `todo-item border border-${todo.color || "secondary"} rounded p-3 mb-1`;
+      todoItem.className = `todo-item border border-${todo.color || "secondary"} rounded p-3 mb-1 me-1`;
       
       if (todo.completed) {
         todoItem.classList.add("border-success");
