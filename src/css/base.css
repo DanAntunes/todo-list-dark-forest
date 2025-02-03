@@ -44,29 +44,26 @@ footer p a:hover {
   text-decoration: none;
 }
 
-/* Estilização geral para WebKit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 10px; /* Largura da scrollbar vertical */
-  height: 10px; /* Altura da scrollbar horizontal */
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a; /* Cor do fundo da track */
-  border-radius: 5px;
+  background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333; /* Cor do thumb (parte móvel) */
+  background: #333;
   border-radius: 5px;
-  border: 2px solid #1a1a1a; /* Borda para criar contraste */
+  border: 2px solid #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #444; /* Cor ao passar o mouse */
+  background: #444;
 }
 
-/* Estilização para Firefox */
 * {
-  scrollbar-width: thin; /* "auto" ou "thin" */
-  scrollbar-color: #333 #1a1a1a; /* thumb e track */
+  scrollbar-width: thin; 
+  scrollbar-color: #333 #1a1a1a;
 }
