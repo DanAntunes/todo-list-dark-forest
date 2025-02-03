@@ -1,6 +1,33 @@
 @import url('./variables.css');
 
 /* Componentes Principais */
+#todo-list {
+  max-height: 320px; /* Altura máxima de 70% da tela */
+  overflow-x: hidden; /* Habilita scroll horizontal */
+  overflow-y: auto; /* Desabilita scroll vertical */
+  background:  var(--bg-color);
+  margin-bottom: 5px;
+}
+
+/* Estilizar a barra de scroll (opcional) */
+#todo-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+#todo-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#todo-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#todo-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .todo-container {
   background-color: var(--bg-container);
   padding: 20px;
