@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="d-flex justify-content-between align-items-center todo">
         <div>
           <input type="checkbox" class="form-check-input me-2 toggle-complete" ${todo.completed ? "checked" : ""}>
-          <h5 class="d-inline">${todo.title}</h5>
+          <h5 class="d-inline">${todo.title}${todo.completed ? ' ✅' : ''}</h5>
         </div>
         <div class="text-center flex-grow-1">
           <p class=" small mb-0 todo-date">${todo.date || "Sem data definida"}</p>
