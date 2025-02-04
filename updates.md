@@ -128,3 +128,19 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     Atualização das classes dos itens da lista para incluir padding, margin e bordas arredondadas.
   - **CSS:**  
     Definição de um `max-height` para a section e configuração de `overflow-y` para permitir scroll vertical, com pequenas customizações na barra de scroll.
+
+    ---
+### **04/02 - Inclusão do Indicador Visual para Tarefas Concluídas**
+
+- **Descrição:**  
+  Atualização na função `renderTodos` para exibir um ícone (✅) ao lado do título das tarefas concluídas, facilitando a identificação dos itens já finalizados.
+
+- **Detalhes:**  
+  - **JavaScript:**  
+    Foi alterado o template literal que renderiza o título da tarefa. Agora, se a tarefa estiver concluída, o ícone "✅" é adicionado automaticamente.  
+    ```javaScript
+    <h5 class="d-inline">${todo.title}${todo.completed ? ' ✅' : ''}
+    </h5>
+    ```
+  - Essa modificação permite uma visualização rápida e intuitiva do status das tarefas, sem impactar outras funcionalidades.
+
