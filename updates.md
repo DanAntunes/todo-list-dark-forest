@@ -113,3 +113,18 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
 
 - **Detalhes:**  
  Foi adicionado um novo estilo para os itens de tarefas `.todo-item`. Esse estilo melhora a aparência ao alterar o fundo, a cor do texto e adicionar efeitos de borda e sombra. Além disso, foram incluídos efeitos de transição e hover para uma melhor experiência do usuário.
+
+---
+
+### **03/02 - Otimização da Exibição da Todo List**
+
+- **Descrição:**  
+  Atualização na exibição da lista de tarefas para evitar que a página fique muito extensa, implementando um limite de altura e scroll vertical.
+
+- **Detalhes:**  
+  - **HTML:**  
+    Ajuste na section que contém as tarefas, adicionando classes para melhor espaçamento e arredondamento.
+  - **JavaScript:**  
+    Atualização das classes dos itens da lista para incluir padding, margin e bordas arredondadas.
+  - **CSS:**  
+    Definição de um `max-height` para a section e configuração de `overflow-y` para permitir scroll vertical, com pequenas customizações na barra de scroll.
