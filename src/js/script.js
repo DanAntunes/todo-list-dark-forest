@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         completed: false,
       };
 
-      todos.push(newTodo);
+      todos.unshift(newTodo);
       saveToLocalStorage();
       renderTodos();
 
