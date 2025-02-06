@@ -2,14 +2,13 @@
 
 /* Componentes Principais */
 #todo-list {
-  max-height: 320px; /* Altura máxima de 70% da tela */
-  overflow-x: hidden; /* Habilita scroll horizontal */
-  overflow-y: auto; /* Desabilita scroll vertical */
+  max-height: 320px; 
+  overflow-x: hidden; 
+  overflow-y: auto; 
   background:  var(--bg-color);
   margin-bottom: 5px;
 }
 
-/* Estilizar a barra de scroll (opcional) */
 #todo-list::-webkit-scrollbar {
   width: 8px;
 }
