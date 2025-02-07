@@ -31,7 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
       todoItem.className = `todo-item border border-${todo.color || "secondary"} rounded p-3 mb-1 me-1`;
       
       if (todo.completed) {
-        todoItem.classList.add("border-success");
+           // Remove a classe de borda original para evitar conflito
+    todoItem.classList.remove(`border-${todo.color || "secondary"}`);
+    // Adiciona a classe de borda de sucesso
+    todoItem.classList.add("border-success");
       }
 
       todoItem.dataset.id = todo.id;
