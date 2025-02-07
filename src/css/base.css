@@ -29,6 +29,10 @@ h5 {
 }
 
 /* Footer */
+.bg-forest {
+  background: #0E101F;
+  opacity: 0.4;
+}
 footer {
   margin: 0;
   padding: 0;
