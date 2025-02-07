@@ -1,6 +1,7 @@
 @import url('./variables.css');
 html, body {
   height: 100%;
+  margin: 0;
 }
 
 /* Estilo Base */
@@ -22,6 +23,7 @@ h1.title {
   text-transform: uppercase;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.95);
 }
+
 h5 {
   text-transform: uppercase;
   font-weight: 420;
@@ -30,12 +32,11 @@ h5 {
 
 /* Footer */
 .bg-forest {
-  background: #0E101F;
-  opacity: 0.4;
+  background: rgba(14, 16, 31, 0.4);
 }
 footer {
-  margin: 0;
   padding: 0;
+  width: 100%;
 }
 footer p {
   font-size: 0.875rem;
@@ -48,7 +49,7 @@ footer p a {
   text-decoration: none;
 }
 footer p a:hover {
-  color: var(--hover-color);
+  color: #9ea135;
   text-decoration: none;
 }
 
