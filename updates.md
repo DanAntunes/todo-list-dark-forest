@@ -130,7 +130,8 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
   - **CSS:**  
     Definição de um `max-height` para a section e configuração de `overflow-y` para permitir scroll vertical, com pequenas customizações na barra de scroll.
 
-    ---
+---
+
 ### **04/02 - Inclusão do Indicador Visual para Tarefas Concluídas**
 
 - **Descrição:**  
