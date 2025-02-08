@@ -158,7 +158,9 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     O nome do projeto foi alterado para **"To Do List - Dark Forest Theme"**.
   - **Estrutura HTML:**  
     A classe `todo-container` foi movida de `<main>` para uma `<section>` interna, melhorando a organização do conteúdo.
+
 ---
+
 ### **07/02 - Adição de Animação e Ajustes no Background**
 
 - **Descrição:**  
