@@ -74,6 +74,7 @@ Este documento lista as atualizações mais recentes realizadas no projeto **ToD
   Além disso, a **class** CSS `todo-date` foi aplicada ao campo de data para estilizar o texto, garantindo que ele seja exibido na cor branca.
 
 ---
+
 ### **22/01 - Atualização do Rodapé (Footer)**
 
 - **Descrição:**  
@@ -89,7 +90,7 @@ Este documento lista as atualizações mais recentes realizadas no projeto **ToD
     </p>
   </footer>
   ```
-  ---
+---
 
 ### **23/01 - Organização do Arquivo CSS**
 
