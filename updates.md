@@ -216,3 +216,21 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
       container.appendChild(div);
     }
     ```
+---
+### **07/02 - Atualização na Renderização das Tarefas**
+
+- **Descrição:**  
+  Melhoria na função `renderTodos` para aprimorar a visualização de tarefas concluídas.
+
+- **Detalhes:**  
+  - **Atualização na Lógica:**  
+    Agora, quando uma tarefa está concluída, a função remove a classe de borda original (`border-${todo.color || "secondary"}`) e a substitui por `border-success`. Essa alteração reforça visualmente o status concluído da tarefa.  
+    *Antes, essa remoção não era realizada.*
+  
+  - **Código Relevante:**
+    ```javascript
+    if (todo.completed) {
+      todoItem.classList.remove(`border-${todo.color || "secondary"}`);
+      todoItem.classList.add("border-success");
+    }
+    ```
