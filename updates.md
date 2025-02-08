@@ -223,6 +223,7 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     }
     ```
 ---
+
 ### **07/02 - Atualização na Renderização das Tarefas**
 
 - **Descrição:**  
