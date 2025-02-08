@@ -143,7 +143,7 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     </h5>
     ```
   - Essa modificação permite uma visualização rápida e intuitiva do status das tarefas, sem impactar outras funcionalidades.
-
+---
 ### **06/02 - Atualização na Estrutura do Projeto**
 
 - **Descrição:**  
