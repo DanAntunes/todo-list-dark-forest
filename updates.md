@@ -154,3 +154,65 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     O nome do projeto foi alterado para **"To Do List - Dark Forest Theme"**.
   - **Estrutura HTML:**  
     A classe `todo-container` foi movida de `<main>` para uma `<section>` interna, melhorando a organização do conteúdo.
+
+### **07/02 - Adição de Animação e Ajustes no Background**
+
+- **Descrição:**  
+  Esta atualização implementa novos efeitos visuais e animações para aprimorar a experiência do usuário, incluindo mudanças no background, adição de animações via Sass e CSS, e a inclusão de um script para gerar elementos animados ("fireflies").
+
+- **Detalhes:**  
+  - **Background e Layout:**  
+    O estilo do `<body>` foi atualizado para incluir uma imagem de fundo, definir o tamanho da imagem e garantir que a altura ocupe 100% da viewport.  
+    ```css
+    body { 
+      color: var(--primary-color);
+      background: url('https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg'), var(--bg-color);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    ```  
+    *Antes, não havia definição de `background-url`, `background-size` nem `height: 100vh`.*
+
+  - **Animação com Sass e CSS:**  
+    Foi criada a classe `.firefly` utilizando Sass para gerar animações dinâmicas e aleatórias, com keyframes personalizados para simular o movimento de vaga-lumes na tela.  
+    ```scss
+    .firefly {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      width: 0.4vw;
+      height: 0.4vw;
+      margin: -0.2vw 0 0 9.8vw;
+      animation: ease 200s alternate infinite;
+      pointer-events: none;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform-origin: -10vw;
+      }
+
+      // Demais configurações e loop para animação dos elementos...
+    }
+    ```
+  
+  - **Marcação do Container de Animação:**  
+    O elemento `<body>` agora possui o `id="fireflies-container"`, definindo o container para os efeitos animados.
+
+  - **Inclusão de Script para Gerar "Fireflies":**  
+    Adicionado um novo script que cria dinamicamente 15 elementos com a classe `.firefly` dentro do container, possibilitando a exibição dos efeitos animados.  
+    ```javascript
+    const quantity = 15;
+    const container = document.getElementById("fireflies-container");
+    for (let i = 0; i < quantity; i++) {
+      const div = document.createElement("div");
+      div.className = "firefly";
+      container.appendChild(div);
+    }
+    ```
