@@ -9,6 +9,13 @@ body {
   color: var(--primary-color);
   background: url('https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg'), var(--bg-color);
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1 1 0;
 }
 
 /* Headers e Títulos */
