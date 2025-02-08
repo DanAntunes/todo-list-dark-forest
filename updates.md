@@ -55,7 +55,7 @@ Este documento lista as atualizações mais recentes realizadas no projeto **ToD
 
   Essa melhoria garante que o campo de data seja exibido de forma amigável e funcional em qualquer cenário.
 
-----
+---
 
 ### **22/01 - Edição do Campo de Data (Input Date)**
 
