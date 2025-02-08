@@ -241,3 +241,55 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
       todoItem.classList.add("border-success");
     }
     ```
+---
+
+### **08/02 - Ajustes na Animação dos Fireflies**
+
+- **Descrição:**  
+  Foram realizados ajustes na classe `.firefly` para aprimorar a centralização dos elementos e corrigir problemas visuais na animação, como a persistência de um ponto preto.
+
+- **Detalhes:**  
+  - **Centralização:**  
+    O valor do `margin` foi alterado de `-0.2vw 0 0 9.8vw` para `-0.2vw 0 0 -0.2vw`, corrigindo o posicionamento dos fireflies.
+  - **Transform Origin:**  
+    A propriedade `transform-origin` dos pseudo-elementos `::before` e `::after` foi modificada de `-10vw` para `50% 50%`, garantindo que as rotações ocorram em torno do centro do elemento.
+  - **Ajuste de Opacidade:**  
+    A opacidade do pseudo-elemento `::before` foi ajustada de `0.4` para `0` para eliminar a exibição indesejada de um ponto preto.
+  - **Outras Propriedades:**  
+    As demais propriedades, como animações e keyframes, permanecem inalteradas, mantendo o efeito de movimento aleatório.
+
+- **Exemplo de Código Atualizado:**  
+  ```scss
+  .firefly {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 0.4vw;
+    height: 0.4vw;
+    margin: -0.2vw 0 0 -0.2vw; // Ajuste para centralizar corretamente
+    animation: ease 200s alternate infinite;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transform-origin: 50% 50%; // Ajuste para girar em torno do centro
+    }
+
+    &::before {
+      background: black;
+      opacity: 0; // Ajuste para 0 se o ponto preto persistir
+      animation: drift ease alternate infinite;
+    }
+
+    &::after {
+      background: white;
+      opacity: 0;
+      box-shadow: 0 0 0vw 0vw yellow;
+      animation: drift ease alternate infinite, flash ease infinite;
+    }
+  }
