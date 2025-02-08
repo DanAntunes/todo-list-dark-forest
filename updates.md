@@ -1,6 +1,6 @@
 # Atualizações do ToDo List
 
-Este documento lista as atualizações mais recentes realizadas no projeto **ToDo List BlackShadow**. Cada atualização aprimora a funcionalidade ou adiciona novas features para melhorar a experiência do usuário.
+Este documento lista as atualizações mais recentes realizadas no projeto **ToDo List Dark Forest Theme**. Cada atualização aprimora a funcionalidade ou adiciona novas features para melhorar a experiência do usuário.
 
 ---
 
