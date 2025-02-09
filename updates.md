@@ -294,25 +294,14 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     }
   }
   ```
----
 
-### **09/02 - Atualização do Base.cs para Suporte a Navegadores Legados**
+---
+  
+### **09/02 - Atualização do components.css: Vendor Prefixes e Ajuste no Hover**
 
 - **Descrição:**  
-  Atualização do arquivo base.cs para ampliar a compatibilidade com navegadores antigos, adicionando prefixos e propriedades específicas para flexbox legada sem alterar os estilos originais.
+  Nesta atualização foram introduzidos os prefixos `-webkit-` para propriedades críticas como `box-shadow`, `transform`, `transition` e `backdrop-filter`, aumentando a compatibilidade com navegadores baseados em WebKit (como versões antigas do Chrome e o Safari). Além disso, o efeito de hover em `.todo-item` foi ajustado: a declaração de sombra duplicada foi eliminada, mantendo apenas a sombra inset desejada para destacar o item de forma mais consistente.
 
-- **Detalhes:**  
-  - **Suporte a Flexbox:**  
-    No seletor `body`, foram adicionadas as declarações:
-    - `display: -webkit-box;`
-    - `display: -ms-flexbox;`  
-    Junto com os ajustes `-webkit-box-orient`, `-webkit-box-direction` e `-ms-flex-direction` para garantir o comportamento em navegadores mais antigos.
-  - **Ajuste no Main:**  
-    O elemento `main` passou a incluir:
-    - `-webkit-box-flex: 1;`
-    - `-ms-flex: 1 1 0;`  
-    para manter o layout flexível em navegadores legados.
-  - **Outros Estilos:**  
-    As demais regras (background, headers, footer e scrollbars customizados) permanecem inalteradas, com apenas comentários adicionais para esclarecer o suporte legado.
-
---- 
+- **Impacto no Funcionamento:**  
+  - **Compatibilidade Aprimorada:** As alterações garantem que os efeitos visuais e a renderização dos componentes permaneçam consistentes em diversos navegadores, especialmente aqueles que ainda dependem de prefixos.
+  - **Estabilidade Visual:** Ao remover declarações redundantes de sombra no estado hover, o destaque dos itens fica mais uniforme, melhorando a experiência do usuário sem modificar a identidade visual do projeto.
