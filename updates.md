@@ -293,3 +293,24 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
       animation: drift ease alternate infinite, flash ease infinite;
     }
   }
+  ```
+### **09/02 - Atualização do Base.cs para Suporte a Navegadores Legados**
+
+- **Descrição:**  
+  Atualização do arquivo base.cs para ampliar a compatibilidade com navegadores antigos, adicionando prefixos e propriedades específicas para flexbox legada sem alterar os estilos originais.
+
+- **Detalhes:**  
+  - **Suporte a Flexbox:**  
+    No seletor `body`, foram adicionadas as declarações:
+    - `display: -webkit-box;`
+    - `display: -ms-flexbox;`  
+    Junto com os ajustes `-webkit-box-orient`, `-webkit-box-direction` e `-ms-flex-direction` para garantir o comportamento em navegadores mais antigos.
+  - **Ajuste no Main:**  
+    O elemento `main` passou a incluir:
+    - `-webkit-box-flex: 1;`
+    - `-ms-flex: 1 1 0;`  
+    para manter o layout flexível em navegadores legados.
+  - **Outros Estilos:**  
+    As demais regras (background, headers, footer e scrollbars customizados) permanecem inalteradas, com apenas comentários adicionais para esclarecer o suporte legado.
+
+--- 
