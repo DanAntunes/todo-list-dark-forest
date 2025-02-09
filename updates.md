@@ -305,3 +305,6 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
 - **Impacto no Funcionamento:**  
   - **Compatibilidade Aprimorada:** As alterações garantem que os efeitos visuais e a renderização dos componentes permaneçam consistentes em diversos navegadores, especialmente aqueles que ainda dependem de prefixos.
   - **Estabilidade Visual:** Ao remover declarações redundantes de sombra no estado hover, o destaque dos itens fica mais uniforme, melhorando a experiência do usuário sem modificar a identidade visual do projeto.
+
+---
+
