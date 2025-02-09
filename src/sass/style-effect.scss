@@ -4,7 +4,7 @@
   top: 50%;
   width: 0.4vw;
   height: 0.4vw;
-  margin: -0.2vw 0 0 -0.2vw; // Ajuste para centralizar corretamente
+  margin: -0.2vw 0 0 -0.2vw;
   animation: ease 200s alternate infinite;
   pointer-events: none;
 
@@ -15,12 +15,12 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    transform-origin: 50% 50%; // Ajuste para girar em torno do centro
+    transform-origin: 50% 50%; 
   }
 
   &::before {
     background: black;
-    opacity: 0; // Ajuste para 0 se o ponto preto persistir
+    opacity: 0;
     animation: drift ease alternate infinite;
   }
 
@@ -32,7 +32,6 @@
   }
 }
 
-// Randomize Fireflies Motion
 @for $i from 1 through 15 {
   $steps: random(12) + 16;
   $rotationSpeed: random(10) + 8s;
