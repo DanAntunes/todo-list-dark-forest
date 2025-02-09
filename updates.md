@@ -308,3 +308,38 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
 
 ---
 
+### **09/02 - Atualização do base.css: Suporte a Navegadores Legados para Flexbox**
+
+- **Descrição:**  
+  Nesta atualização, foram adicionados prefixos e declarações extras para oferecer suporte completo ao Flexbox em navegadores legados. A modificação abrange tanto o elemento `body` quanto o `main`, garantindo que o layout se comporte conforme esperado em ambientes que não suportam integralmente as propriedades modernas de Flexbox.
+
+- **Detalhes da Atualização:**  
+  - **Body:**  
+    - Foram adicionadas as declarações:
+      ```css
+      display: -webkit-box;
+      display: -ms-flexbox;
+      ```
+      antes da declaração padrão `display: flex;`.
+    - Também foram incluídas as propriedades:
+      ```css
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      ```
+      para reforçar a direção em coluna.
+  - **Main:**  
+    - Para garantir que o elemento `main` ocupe o espaço corretamente, foram adicionadas as seguintes declarações:
+      ```css
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 0;
+      ```
+      antes de `flex: 1 1 0;`.
+
+- **Impacto no Funcionamento:**  
+  - **Compatibilidade Ampliada:**  
+    Essas alterações melhoram a compatibilidade do layout com navegadores legados, garantindo que o Flexbox seja interpretado corretamente mesmo em ambientes que exigem prefixos específicos.
+  - **Manutenção da Estrutura:**  
+    O layout geral e a responsividade permanecem inalterados, assegurando que a interface continue a se comportar como esperado, independentemente do navegador utilizado.
+
+---
