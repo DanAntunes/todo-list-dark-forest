@@ -101,5 +101,3 @@ Este projeto é de uso livre e pode ser modificado conforme suas necessidades. P
 </div>
 
 ---
-
-Experimente, explore e deixe sua produtividade florescer na escuridão da floresta! 🚀
