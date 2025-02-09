@@ -30,6 +30,7 @@ A aplicação foi desenvolvida com o intuito de facilitar o gerenciamento de tar
 
 - **HTML5:** Estruturação da página e semântica.
 - **CSS3:** Estilização da aplicação. Utilização de um arquivo de reset e estilos customizados para o tema Dark Forest.
+- **Sass:** Pré-processador CSS que facilita a manutenção e a escalabilidade do código CSS.
 - **JavaScript:** Lógica da aplicação, manipulação do DOM e gerenciamento de tarefas.
 - **Bootstrap 5:** Layout responsivo e componentes visuais.
 - **Font Awesome & Bootstrap Icons:** Ícones para botões e indicações visuais.
