@@ -1,7 +1,7 @@
 # To Do List - Dark Forest Theme
 
 <div align="center">
-  <img src="https://via.placeholder.com/800x200?text=Dark+Forest+To+Do+List" alt="Dark Forest Banner" />
+  <img src="./public/assets/image/screenshot.png" alt="Dark Forest Screenshot" />
 </div>
 
 Uma aplicação **incrível** e **mágica** para gerenciar suas tarefas com o tema Dark Forest 🌲🌑. Se você procura um jeito simples e elegante de manter suas pendências organizadas, este projeto é perfeito para você!
