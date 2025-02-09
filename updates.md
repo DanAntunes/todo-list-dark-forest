@@ -367,3 +367,5 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     Com os prefixos, a definição de `box-sizing: border-box` agora é aplicada corretamente em navegadores baseados em WebKit e Mozilla, o que ajuda a manter o layout conforme o esperado, mesmo em versões legadas.
   - **Manutenção do Reset:**  
     O restante do reset permanece inalterado, assegurando que margens, preenchimentos e estilos básicos sejam uniformes, contribuindo para um ponto de partida consistente para a estilização dos elementos.
+    
+---
