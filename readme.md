@@ -1,6 +1,6 @@
-# To Do List - BlackShadow Theme
+# To Do List - Dark Forest Theme
 
-Este projeto é uma aplicação de lista de tarefas (To Do List) com o tema BlackShadow, desenvolvida utilizando HTML, CSS, JavaScript e algumas bibliotecas externas como Bootstrap, Font Awesome e AlertifyJS. A aplicação permite criar, editar, excluir, pesquisar e filtrar tarefas, além de armazená-las no **localStorage** do navegador.
+Este projeto é uma aplicação de lista de tarefas (To Do List) com o tema Dark Forest, desenvolvida utilizando HTML, CSS, JavaScript e algumas bibliotecas externas como Bootstrap, Font Awesome e AlertifyJS. A aplicação permite criar, editar, excluir, pesquisar e filtrar tarefas, além de armazená-las no **localStorage** do navegador.
 
 ## Sumário
 
@@ -29,7 +29,7 @@ A aplicação foi desenvolvida com o intuito de facilitar o gerenciamento de tar
 ## Tecnologias Utilizadas
 
 - **HTML5:** Estruturação da página e semântica.
-- **CSS3:** Estilização da aplicação. Utilização de um arquivo de reset e estilos customizados para o tema BlackShadow.
+- **CSS3:** Estilização da aplicação. Utilização de um arquivo de reset e estilos customizados para o tema Dark Forest.
 - **JavaScript:** Lógica da aplicação, manipulação do DOM e gerenciamento de tarefas.
 - **Bootstrap 5:** Layout responsivo e componentes visuais.
 - **Font Awesome & Bootstrap Icons:** Ícones para botões e indicações visuais.
