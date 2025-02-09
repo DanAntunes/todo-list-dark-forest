@@ -1,6 +1,12 @@
 # To Do List - Dark Forest Theme
 
-Este projeto é uma aplicação de lista de tarefas (To Do List) com o tema Dark Forest, desenvolvida utilizando HTML, CSS, JavaScript e algumas bibliotecas externas como Bootstrap, Font Awesome e AlertifyJS. A aplicação permite criar, editar, excluir, pesquisar e filtrar tarefas, além de armazená-las no **localStorage** do navegador.
+<div align="center">
+  <img src="https://via.placeholder.com/800x200?text=Dark+Forest+To+Do+List" alt="Dark Forest Banner" />
+</div>
+
+Uma aplicação **incrível** e **mágica** para gerenciar suas tarefas com o tema Dark Forest 🌲🌑. Se você procura um jeito simples e elegante de manter suas pendências organizadas, este projeto é perfeito para você!
+
+---
 
 ## Sumário
 
@@ -10,56 +16,90 @@ Este projeto é uma aplicação de lista de tarefas (To Do List) com o tema Dark
 - [Como Usar](#como-usar)
 - [Licença](#licença)
 
+---
+
 ## Visão Geral
 
-A aplicação foi desenvolvida com o intuito de facilitar o gerenciamento de tarefas diárias. Ao acessar a aplicação, o usuário encontra uma interface intuitiva que permite adicionar novas tarefas, editá-las ou excluí-las conforme a necessidade. As tarefas são persistidas localmente através do **localStorage**, garantindo que os dados não sejam perdidos ao atualizar a página.
+Esta aplicação foi criada com muita paixão para tornar a gestão das tarefas diárias uma experiência **única** e **interativa**. Inspirada na beleza misteriosa de uma floresta sombria, cada detalhe foi pensado para proporcionar uma experiência inesquecível aos usuários.
+
+---
 
 ## Funcionalidades
 
-- **Adicionar Tarefas:** Ao preencher o título da tarefa e enviar o formulário, é aberto um modal para inserir detalhes adicionais, como descrição, data e a cor da borda que define a prioridade ou categoria.
-- **Listagem de Tarefas:** As tarefas são exibidas em uma lista, mostrando seu título, data e status (completa ou pendente). Tarefas concluídas são marcadas visualmente.
-- **Marcar Tarefa como Concluída:** É possível marcar ou desmarcar tarefas como concluídas utilizando checkboxes.
-- **Editar Tarefas:** O usuário pode editar uma tarefa existente através de um modal que permite alterar título, descrição, data e cor da borda.
-- **Excluir Tarefas:** Ao clicar no botão de exclusão, é exibida uma confirmação utilizando o AlertifyJS para evitar exclusões acidentais.
-- **Pesquisa e Filtro:** 
-  - **Pesquisar:** Um campo de busca permite filtrar as tarefas por título.
-  - **Filtrar:** Um menu de seleção possibilita exibir todas as tarefas ou somente as concluídas ou pendentes.
-- **Acessibilidade:** A aplicação utiliza atributos ARIA e classes de utilidade para melhorar a experiência de usuários com necessidades especiais.
+- **Adicionar Tarefas 📝:** Preencha o título da tarefa e abra um modal para inserir detalhes como descrição, data e até escolher a cor da borda que indica a prioridade.
+- **Listagem de Tarefas 📋:** Visualize suas tarefas organizadas e com um design encantador.
+- **Marcar como Concluída ✅:** Utilize checkboxes para marcar ou desmarcar tarefas, diferenciando visualmente as concluídas das pendentes.
+- **Editar Tarefas ✏️:** Modifique suas tarefas com facilidade através de um modal intuitivo.
+- **Excluir Tarefas 🗑️:** Remova tarefas com segurança, contando com confirmações que evitam exclusões acidentais.
+- **Pesquisar e Filtrar 🔍:**
+  - **Pesquisar:** Encontre tarefas rapidamente pelo título.
+  - **Filtrar:** Exiba todas, apenas as concluídas ou somente as pendentes.
+- **Acessibilidade ♿:** A aplicação incorpora atributos ARIA e classes utilitárias para proporcionar uma experiência inclusiva.
+
+---
 
 ## Tecnologias Utilizadas
 
-- **HTML5:** Estruturação da página e semântica.
-- **CSS3:** Estilização da aplicação. Utilização de um arquivo de reset e estilos customizados para o tema Dark Forest.
-- **Sass:** Pré-processador CSS que facilita a manutenção e a escalabilidade do código CSS.
-- **JavaScript:** Lógica da aplicação, manipulação do DOM e gerenciamento de tarefas.
-- **Bootstrap 5:** Layout responsivo e componentes visuais.
-- **Font Awesome & Bootstrap Icons:** Ícones para botões e indicações visuais.
-- **AlertifyJS:** Exibição de notificações e confirmação de ações (como a exclusão de tarefas).
+Confira as tecnologias que dão vida a este projeto:
+
+<div align="center">
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  </a>
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  </a>
+  <a href="https://sass-lang.com" target="_blank">
+    <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" />
+  </a>
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  </a>
+  <a href="https://getbootstrap.com" target="_blank">
+    <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+  </a>
+  <a href="https://fontawesome.com" target="_blank">
+    <img src="https://img.shields.io/badge/Font%20Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white" alt="Font Awesome" />
+  </a>
+  <a href="https://alertifyjs.com" target="_blank">
+    <img src="https://img.shields.io/badge/AlertifyJS-000000?style=for-the-badge&logo=javascript&logoColor=white" alt="AlertifyJS" />
+  </a>
+</div>
+
+---
 
 ## Como Usar
 
 1. **Abrir a Aplicação:**
-   - Basta abrir o arquivo `index.html` em um navegador moderno (Chrome, Firefox, Edge, etc.). Não é necessário um servidor web, pois os dados são armazenados localmente.
+   - Basta abrir o arquivo `index.html` em um navegador moderno (Chrome, Firefox, Edge, etc.). Não há necessidade de um servidor web, pois os dados são armazenados localmente via **localStorage**.
 
 2. **Adicionar uma Nova Tarefa:**
-   - Digite o título da tarefa no campo de entrada principal.
-   - Clique no botão de adicionar (ícone de “+”), o que abrirá um modal para inserir detalhes adicionais como data, descrição e a cor da borda.
-   - Após preencher os dados, clique em "Salvar Tarefa" para adicionar a tarefa à lista.
+   - Insira o título da tarefa no campo de entrada principal.
+   - Clique no botão de adicionar (ícone de “+”) para abrir um modal onde você poderá inserir detalhes adicionais, como data, descrição e a cor que indica a prioridade.
+   - Clique em **Salvar Tarefa** para adicionar sua tarefa à lista.
 
 3. **Visualizar, Editar e Excluir Tarefas:**
-   - **Listagem:** As tarefas são exibidas com seus respectivos detalhes. Tarefas concluídas são visualmente diferenciadas.
-   - **Editar:** Clique no botão “Editar” da tarefa desejada para abrir o modal de edição. Faça as alterações necessárias e salve.
-   - **Excluir:** Clique no botão “Excluir” e confirme a ação na janela de confirmação para remover a tarefa.
+   - **Listagem:** Visualize todas as tarefas com detalhes e um design limpo.
+   - **Editar:** Utilize o botão **Editar** para alterar as informações da tarefa.
+   - **Excluir:** Remova tarefas com o botão **Excluir** e confirme a ação para evitar exclusões acidentais.
 
 4. **Pesquisar e Filtrar:**
-   - Utilize o campo de pesquisa para filtrar tarefas por título.
-   - Use o menu suspenso de filtro para exibir todas as tarefas, apenas as concluídas ou apenas as pendentes.
-
-## Licença
-
-Este projeto é de uso livre e pode ser utilizado e modificado conforme as necessidades do usuário. Para mais detalhes, consulte o arquivo de licença (se houver).
+   - Utilize o campo de busca para localizar tarefas pelo título.
+   - Use o menu suspenso para filtrar entre todas, concluídas ou pendentes.
 
 ---
 
-Desenvolvido por **Dan Antunes (DJA)** © 2025.  
-Para mais informações, visite o [GitHub do Dan Antunes](https://github.com/DanAntunes).
+## Licença
+
+Este projeto é de uso livre e pode ser modificado conforme suas necessidades. Para mais detalhes, consulte o arquivo de licença (se disponível).
+
+---
+
+<div align="center">
+  <sub>Desenvolvido com ❤️ e muito código por **Dan Antunes (DJA)** © 2025<br>
+  <a href="https://github.com/DanAntunes" target="_blank">GitHub do Dan Antunes</a></sub>
+</div>
+
+---
+
+Experimente, explore e deixe sua produtividade florescer na escuridão da floresta! 🚀
