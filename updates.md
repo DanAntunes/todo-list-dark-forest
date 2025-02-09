@@ -294,6 +294,8 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     }
   }
   ```
+---
+
 ### **09/02 - Atualização do Base.cs para Suporte a Navegadores Legados**
 
 - **Descrição:**  
