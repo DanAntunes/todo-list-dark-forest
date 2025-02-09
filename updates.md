@@ -343,3 +343,14 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     O layout geral e a responsividade permanecem inalterados, assegurando que a interface continue a se comportar como esperado, independentemente do navegador utilizado.
 
 ---
+
+### **09/02 - Atualização do forms.css: Inclusão de Prefixos WebKit**
+
+- **Descrição:**  
+  Foram adicionados os prefixos `-webkit-` às propriedades CSS utilizadas em inputs e controles de formulário, como `box-shadow`, `transition`, `transform` e `border-radius`. Essa atualização tem como objetivo ampliar a compatibilidade com navegadores que utilizam o motor WebKit e versões legadas, sem alterar o design e o comportamento dos elementos.
+
+- **Impacto no Funcionamento:**  
+  - **Compatibilidade Ampliada:**  
+    Ao incluir os prefixos, as propriedades agora são interpretadas corretamente em navegadores que dependem do `-webkit-`, garantindo que os efeitos visuais (como sombras, transições e escalonamento) funcionem conforme o esperado.
+  - **Consistência Visual:**  
+    Apesar da inclusão dos prefixos, o layout e o estilo dos elementos permanecem inalterados, mantendo a experiência de usuário consistente em diferentes navegadores.
