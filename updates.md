@@ -354,3 +354,16 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     Ao incluir os prefixos, as propriedades agora são interpretadas corretamente em navegadores que dependem do `-webkit-`, garantindo que os efeitos visuais (como sombras, transições e escalonamento) funcionem conforme o esperado.
   - **Consistência Visual:**  
     Apesar da inclusão dos prefixos, o layout e o estilo dos elementos permanecem inalterados, mantendo a experiência de usuário consistente em diferentes navegadores.
+
+---
+
+### **09/02 - Atualização do reset.css: Inclusão de Prefixos para box-sizing**
+
+- **Descrição:**  
+  Foram adicionados os prefixos `-webkit-` e `-moz-` à propriedade `box-sizing` para ampliar a compatibilidade com navegadores que utilizam esses motores, garantindo que o comportamento da propriedade seja consistente em todas as plataformas.
+
+- **Impacto no Funcionamento:**  
+  - **Compatibilidade Ampliada:**  
+    Com os prefixos, a definição de `box-sizing: border-box` agora é aplicada corretamente em navegadores baseados em WebKit e Mozilla, o que ajuda a manter o layout conforme o esperado, mesmo em versões legadas.
+  - **Manutenção do Reset:**  
+    O restante do reset permanece inalterado, assegurando que margens, preenchimentos e estilos básicos sejam uniformes, contribuindo para um ponto de partida consistente para a estilização dos elementos.
