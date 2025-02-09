@@ -367,5 +367,45 @@ Atualização dos estilos dos itens de tarefas para melhorar a aparência e a in
     Com os prefixos, a definição de `box-sizing: border-box` agora é aplicada corretamente em navegadores baseados em WebKit e Mozilla, o que ajuda a manter o layout conforme o esperado, mesmo em versões legadas.
   - **Manutenção do Reset:**  
     O restante do reset permanece inalterado, assegurando que margens, preenchimentos e estilos básicos sejam uniformes, contribuindo para um ponto de partida consistente para a estilização dos elementos.
-    
+
+---
+
+### **09/02 - Atualização do style-effect.scss: Adição de Prefixos para Animações Cross-Browser**
+
+- **Descrição:**  
+  Nesta atualização, foram adicionados prefixos `-webkit-` às propriedades de animação e transformação para garantir compatibilidade com navegadores mais antigos que utilizam o motor WebKit. Essa alteração mantém os efeitos visuais dos "fireflies" (partículas animadas) enquanto amplia o suporte a diferentes browsers.
+
+- **Detalhes da Atualização:**  
+  - **Propriedades de Animação:**  
+    Todas as declarações `animation` foram duplicadas com o prefixo `-webkit-`:
+    ```scss
+    -webkit-animation: ease 200s alternate infinite;
+            animation: ease 200s alternate infinite;
+    ```
+  - **Keyframes:**  
+    Cada `@keyframes` recebeu uma versão prefixada com `@-webkit-keyframes`:
+    ```scss
+    @-webkit-keyframes drift { ... }
+    @keyframes drift { ... }
+    ```
+  - **Transformações:**  
+    As propriedades `transform` e `transform-origin` foram atualizadas com versões prefixadas:
+    ```scss
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    ```
+  - **Otimização de Sintaxe:**  
+    Expressões matemáticas complexas receberam parênteses extras para maior clareza:
+    ```scss
+    scale((random(75) / 100) + 0.25) // Antes: scale(random(75)/100 + .25)
+    ```
+
+- **Impacto no Funcionamento:**  
+  - **Compatibilidade Ampliada:**  
+    Animações agora funcionam em navegadores WebKit legados (ex: Safari versões antigas) sem alterar o comportamento visual.
+  - **Consistência de Efeitos:**  
+    As partículas mantêm seu movimento aleatório (`move#{$i}`), efeito de brilho (`flash`) e rotação suave (`drift`) em todos os browsers.
+  - **Performance Preservada:**  
+    A lógica de geração aleatória de trajetórias via `@for $i from 1 through 15` permanece inalterada, garantindo a mesma variedade de padrões de animação.
+
 ---
