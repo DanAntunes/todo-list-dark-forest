@@ -96,7 +96,7 @@ Este projeto é de uso livre e pode ser modificado conforme suas necessidades. P
 ---
 
 <div align="center">
-  <sub>Desenvolvido com ❤️ e muito código por **Dan Antunes (DJA)** © 2025<br>
+  <sub>Desenvolvido por Dan Antunes (DJA) © 2025<br>
   <a href="https://github.com/DanAntunes" target="_blank">GitHub do Dan Antunes</a></sub>
 </div>
 
