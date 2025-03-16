@@ -114,8 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <!-- Descrição -->
             <div class="mb-3">
-              <label for="task-desc" class="form-label">Descrição</label>
-              <textarea class="form-control text-light" id="task-desc" placeholder="Descrição da tarefa" rows="3" required></textarea>
+              <label for="todo-desc" class="form-label">Descrição</label>
+              <textarea class="form-control text-light" id="todo-desc" placeholder="Descrição da tarefa" rows="3" required></textarea>
             </div>
           </div>
           <div class="modal-footer">
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addTaskModal.show();
 
     document.getElementById("save-task-btn").addEventListener("click", () => {
-      const description = document.getElementById("task-desc").value.trim();
+      const description = document.getElementById("todo-desc").value.trim();
       const color = document.getElementById("task-border").value;
       const date = document.getElementById("task-date").value;
 
