@@ -1,4 +1,17 @@
-@import url('./variables.css');
-@import url('./base.css');
-@import url('./components.css');
-@import url('./forms.css');
+/* LAYOUT CSS */
+@import url(./layout/header.css);
+@import url(./layout/footer.css);
+
+/* BASE CSS */
+@import url(./base/reset.css);
+@import url(./base/variables.css);
+@import url(./base/scrollbar.css);
+@import url(./base/typography.css);
+@import url(./base/global.css);
+
+/* TODO STYLES */
+@import url(./components/todo/todo_container.css);
+@import url(./components/todo/todo_list.css);
+@import url(./components/todo/todo_item.css);
+@import url(./components/todo/todo_forms.css);
+@import url(./components/todo/todo-components.css);
