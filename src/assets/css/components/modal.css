@@ -1,0 +1,20 @@
+/* Modal */
+.modal-backdrop.show {
+  -webkit-backdrop-filter: blur(5px) !important;
+          backdrop-filter: blur(5px) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal {
+  --bs-modal-color: var(--primary-color);
+  --bs-modal-bg: var(--darkness-color);
+  --bs-modal-border-color: var(--border-color);
+}
+
+.modal-header {
+  border-bottom: none !important;
+}
+
+.modal-footer {
+  border-top: none !important;
+}
