@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <!-- Define the character encoding for the document -->
-    <meta charset="UTF-8">
-    <!-- Set the viewport to ensure proper scaling on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Provide a description of the webpage -->
-    <meta name="description" content="To Do List - Dark Forest Theme - 
-    Projeto de Lista de Tarefas com Tema Dark Forest - Feito por Dan Antunes - DJA">
-    <!-- Specify keywords relevant to the content of the webpage -->
-    <meta name="keywords" content="To Do List, Lista de Tarefas, BlackShadow, Tema, Bootstrap, JavaScript, HTML, CSS">
-    <!-- Set the title of the webpage -->
-    <title>To Do List - Dark Forest Theme</title>
-    <!--Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Fonte Google -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/firefly.css">
-    <!-- Alertify CSS -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
-    <!-- Alertify Default theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"/>
-    <!-- Alertify  Semantic UI theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/semantic.min.css"/>
-    <!--  Alertify  Bootstrap theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/bootstrap.min.css"/>
-  </head>
+  <!-- Metadados  essenciais -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Básico -->
+  <title>To Do List - Dark Forest Theme</title>
+  <meta name="description" content="Gerencie suas tarefas diárias com estilo na To Do List Dark Forest! Interface imersiva com tema de floresta noturna, animação de vagalumes e modo escuro. Ideal para organização pessoal e aumento de produtividade com design acessível.">
+  <meta name="keywords" content="To Do List, Lista de Tarefas, Organizador Pessoal, Dark Mode, Tema Escuro, Floresta Noturna, Bootstrap, JavaScript, Acessibilidade, Web App, PWA, Animação CSS, localStorage, Produtividade, Gerenciamento de Tarefas, UI/UX, Frontend, Dan Antunes">
+  <meta name="author" content="Danilo Antunes">
+
+  <!-- Controle de indexação -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Web Manifest e Configurações PWA -->
+  <link rel="manifest" href="">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="">
+  <link rel="icon" type="image/png" sizes="32x32" href="">
+  <link rel="icon" type="image/png" sizes="16x16" href="">
+
+  <!-- Framework CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!--  icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+  <!-- Fonte Google -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="./src/css/style.css">
+
+  <!-- Alertify -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/semantic.min.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/bootstrap.min.css"/>
+
+</head>
   <body id="fireflies-container" class="">
     <!-- Title -->
     <header class="mt-4" aria-labelledby="title">
