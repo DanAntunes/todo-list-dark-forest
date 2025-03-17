@@ -14,7 +14,7 @@
 @import url(./components/todo/todo_list.css);
 @import url(./components/todo/todo_item.css);
 @import url(./components/todo/todo_forms.css);
-@import url(./components/todo/todo-components.css);
+@import url(./components/todo/todo_components.css);
 
 /* COMPONENTS CSS */
 @import url(./components/button.css);
